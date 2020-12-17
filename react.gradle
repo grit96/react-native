@@ -157,6 +157,7 @@ afterEvaluate {
 
             // Set up dev mode
             def devEnabled = !(config."devDisabledIn${targetName}"
+                || config."bundleIn${variant.buildType.name.capitalize()}"
                 || targetName.toLowerCase().contains("release"))
 
             def extraArgs = []
